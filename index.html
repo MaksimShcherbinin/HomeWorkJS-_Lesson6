@@ -90,6 +90,15 @@
         тег в начало элемента, который имеет класс "card".
         */
 
+        const insertFirstChildNode = (parentSelector, childElement) => {
+            document.querySelector(parentSelector).insertBefore(childElement, document.querySelector(parentSelector).firstChild);
+        }
+
+        const paragraphElement = document.createElement('p');
+        paragraphElement.textContent = 'Привет';
+
+        insertFirstChildNode('.card', paragraphElement);
+
         /*
         8. Удалите тег h6 на странице.
         */
