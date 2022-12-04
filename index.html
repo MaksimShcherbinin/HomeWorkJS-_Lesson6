@@ -48,7 +48,12 @@
         поменяйте текст внутри элемента на "ссылка".
         */
 
+        const changeTextContentBySelet = (selector, text) => {
+            const element = document.querySelectorAll(selector);
+            element.forEach(item => item.textContent = text);
+        }
 
+        changeTextContentBySelet('.card-link', 'ссылка');
 
         /*
         3. Найти все элементы на странице с классом "card-link", которые лежат в
